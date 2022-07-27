@@ -13,10 +13,10 @@ JOIN users "u2" ON "u2".id = testimonials."recipientId";
 -- QUESTION 3:
 
 SELECT users.id, users.name, courses.name AS course, schools.name AS school, educations."endDate" FROM educations 
-JOIN users ON users.id = '30' 
+JOIN users ON users.id = educations."userId" 
 JOIN courses ON courses.id = educations."courseId" 
 JOIN schools ON schools.id = educations."schoolId" 
-WHERE educations.status = 'finished';
+WHERE educations.status = 'finished' AND users.id = '30';
 
 -- QUESTION 4:
 
