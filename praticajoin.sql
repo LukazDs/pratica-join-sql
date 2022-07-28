@@ -40,6 +40,3 @@ JOIN roles r ON j."roleId" = r.id
 WHERE co.id = 10
 AND r.name = 'Software Engineer'
 AND j.active = true;
-
-
-
